@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Car } from 'src/app/car';
 
 @Component({
   selector: 'app-homepage',
@@ -10,6 +11,7 @@ export class HomepageComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }

@@ -1,0 +1,24 @@
+<h1>Available Cars</h1>
+<div class="container">
+  <div class="row">
+    <!-- <div class="col-md-6"> -->
+      <div class="card-deck" *ngFor="let car of car" class="col-4">
+        <div class="card">
+          <img
+            class="card-img-top"
+            src="https://i.pinimg.com/originals/45/74/c6/4574c68d814dc0d3a64611ee401ea7dc.jpg"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h4 class="card-title">{{car.carBrand}} {{ car.cmodel }}</h4>
+            <h6>{{car.modelYear}}</h6>
+            <p class="card-text">{{ car.desc }}</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </div>
+        </div>
+      </div>
+    <!-- </div> -->
+  </div>
+</div>
