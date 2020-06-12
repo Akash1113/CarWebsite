@@ -1,13 +1,36 @@
-.container, .row{
+  .row{
   padding: 20px;
-  text-align: center;
   }
-
+  .container{
+    justify-content: center;
+  }
+  .card-body{
+  padding: 10px;
+  }
   .card{
-  text-align: center;
-  width: auto;
-  height: auto;
+  text-align: justify;
+   width: 315px;
+  height: 450px;
+  margin: 25px;
   }
 .col-4{
+
   padding: 10px
+}
+button{
+  margin: 0px 10px;
+  width: 40%;
+}
+
+.input{
+width: 100%;
+}
+
+.formdata{
+text-align: left;
+}
+
+.card-img-top{
+  border-top-left-radius: calc(.25rem - 2px);
+  border-top-right-radius: calc(.25rem - 1px);
 }
