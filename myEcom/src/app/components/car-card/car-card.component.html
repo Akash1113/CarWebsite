@@ -1,4 +1,4 @@
-<h1>Available Cars</h1>
+
 <div class="container">
   <div class="row">
     <div class="cardcontainer" *ngFor="let car of car; let i = index">
@@ -11,7 +11,10 @@
         <div class="card-body">
           <h4 class="card-title">{{ car.carBrand }} {{ car.cmodel }}</h4>
           <h6>{{ car.modelYear }}</h6>
-          <p class="card-text">{{ car.desc }}<br />{{ car.type }}</p>
+          <hr />
+          <p class="card-text">{{ car.desc }}</p>
+          <hr />
+          {{ car.type }}
         </div>
 
         <div class="card-footer">
@@ -19,7 +22,7 @@
             type="button"
             class="btn btn-primary"
             data-toggle="modal"
-            [attr.data-target]= "'#exampleModalCenter'+i"
+            [attr.data-target]="'#exampleModalCenter' + i"
           >
             Edit
           </button>
@@ -38,7 +41,7 @@
   <!-- Modal -->
   <div
     class="modal fade"
-    id="exampleModalCenter{{i}}"
+    id="exampleModalCenter{{ i }}"
     tabindex="-1"
     role="dialog"
     aria-labelledby="exampleModalCenterTitle"
@@ -135,6 +138,7 @@
             type="button"
             class="btn btn-primary"
             (click)="onUpdateCar(car)"
+            data-dismiss="modal"
           >
             Save changes
           </button>

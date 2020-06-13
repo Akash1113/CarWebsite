@@ -4,6 +4,7 @@ import { CarService } from 'src/app/services/car.service';
 
 
 
+
 @Component({
   selector: 'app-car-card',
   templateUrl: './car-card.component.html',
@@ -47,4 +48,6 @@ export class CarCardComponent implements OnInit {
 
     });
   }
+
+
 }
