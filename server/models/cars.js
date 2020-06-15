@@ -8,6 +8,7 @@ const carSchema = new Schema({
     modelYear: String,
     desc: String,
     type: String,
+    image: String
 })
 
 module.exports = mongoose.model('Car', carSchema, 'Cars')
