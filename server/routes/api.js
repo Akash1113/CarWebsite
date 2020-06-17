@@ -45,6 +45,7 @@ router.post('/car', function(req,res, next) {
   newCar.modelYear = req.body.modelYear;
   newCar.desc = req.body.desc;
   newCar.type = req.body.type;
+  
   newCar.save(function(err, insertedCar){
     if(err){
       console.log('error saving car');
@@ -120,6 +121,34 @@ User.findById(req.params.id).exec(function(err, user) {
   }
 })
 })
+
+
+  
+  router.put('/user/:id', function (req,res) {
+    console.log("updated a user")
+    User.findByIdAndUpdate(req.params.id,
+       {$set:{
+        fname: req.body.fname,
+        lname: req.body.lname,
+        email: req.body.email,
+        password: req.body.password
+       }},
+       {
+        new: true
+       },
+      
+        function (err, updateUser) {
+          if(err){
+            res.send("error updating user")
+          }
+          else{
+            res.json(updateUser)
+            console.log("updated user")
+          }
+    })
+  })
+  
+
 
 router.post('/register', (req, res)=>{
   let userData = req.body
