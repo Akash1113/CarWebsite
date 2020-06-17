@@ -1,4 +1,6 @@
-
+<div class="container-fluid bg-primary text-white" style="font-size: large; text-align: center; margin-top: 10px;" >
+Shop Our Products!
+</div>
 <div class="container">
   <div class="row">
     <div class="cardcontainer" *ngFor="let car of car; let i = index">
@@ -20,13 +22,13 @@
         <div class="card-footer">
           <button
             type="button"
-            class="btn btn-primary"
+            class="btn btn-dark"
             data-toggle="modal"
             [attr.data-target]="'#exampleModalCenter' + i"
           >
             Edit
           </button>
-          <button class="btn btn-outline-success" (click)="deleteCar(car)">
+          <button class="btn btn-danger" (click)="deleteCar(car)">
             Delete
           </button>
         </div>

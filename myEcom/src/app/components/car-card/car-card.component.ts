@@ -27,13 +27,12 @@ export class CarCardComponent implements OnInit {
       .subscribe(resCarData => this.car = resCarData);
 
   }
-  updateCar(car: any){
-    this.updateCarEvent.emit(this.cars)
-  }
+
 
   onUpdateCar(car: any){
     this._carService.ediCar(car)
     .subscribe(resEditCar => car = resEditCar);
+    console.log(this.car)
   }
 
   deleteCar(car: any){

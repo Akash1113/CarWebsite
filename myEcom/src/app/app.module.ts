@@ -12,6 +12,8 @@ import { MyNavbarComponent } from './components/my-navbar/my-navbar.component';
 import { CarCardComponent } from './components/car-card/car-card.component';
 import { HttpModule } from '@angular/http';
 import { AddCarComponent } from './components/add-car/add-car.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { AddCarComponent } from './components/add-car/add-car.component';
     HomepageComponent,
     MyNavbarComponent,
     CarCardComponent,
-    AddCarComponent
+    AddCarComponent,
+    UserProfileComponent,
   ],
   imports: [
     BrowserModule,

@@ -11,6 +11,8 @@ export class LoginComponent implements OnInit {
   loginUserData = {
     email: "",
     password: "",
+    fname: "",
+    lname:""
   };
   constructor(private _auth: AuthService, private _router: Router) {}
 
@@ -19,7 +21,9 @@ export class LoginComponent implements OnInit {
     this._auth.loginUser(this.loginUserData).subscribe(
       (res) => {
         console.log(res);
-        localStorage.setItem("token", res.token);
+        console.log(JSON.stringify(res.payload));
+        localStorage.setItem("token",JSON.stringify(res.payload));
+
         this._router.navigate(["/homepage"]);
       },
       (err) => console.log(err)

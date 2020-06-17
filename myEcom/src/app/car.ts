@@ -5,4 +5,5 @@ export class Car{
   modelYear: String;
   desc: String;
   type: String;
+  image: String;
 }

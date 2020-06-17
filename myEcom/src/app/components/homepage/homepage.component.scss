@@ -15,10 +15,70 @@ text-align: center;
   width: 50%;
 }
 
-.carousel-control-prev {
-  margin-left: -100px;
+
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 100%;
+}
+@mixin transition($x, $y, $z){
+  transition: $x $y $z;
+  -moz-transition: $x $y $z;
+  -ms-transition: $x $y $z;
+  -webkit-transition: $x $y $z;
+  -o-transition: $x $y $z;
 }
 
-.carousel-control-next {
-  margin-right: -100px;
+@mixin rotate($x){
+  -ms-transform: rotate($x); /* IE 9 */
+   -webkit-transform: rotate($x); /* Chrome, Safari, Opera */
+   transform: rotate($x);
 }
+
+@mixin scale($x){
+  transform: scale($x);
+  -moz-transform: scale($x);
+  -webkit-transform: scale($x);
+  -o-transform: scale($x);
+  -ms-transform: scale($x);
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  text-align: center;
+  width: 315px;
+  height: 450px;
+  margin: 25px;
+
+@include transition(all, 250ms, ease-out);
+&:hover {
+  @include scale(1.1);
+  @include scale(1.1);
+}
+}
+
+.wrapper {
+
+	h2 {
+		color: #fff;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-family: "Josefin Sans", sans-serif;
+		background: linear-gradient(to right, #e72a3a 10%, #fff 50%, #5bdaff 60%);
+		background-size: auto auto;
+		background-clip: border-box;
+		background-size: 200% auto;
+		color: #fff;
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		animation: textclip 1.5s linear infinite;
+		display: inline-block;
+	}
+}
+
+@keyframes textclip {
+	to {
+		background-position: 200% center;
+	}
+}
+
+

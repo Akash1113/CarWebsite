@@ -11,6 +11,8 @@ export class RegisterComponent implements OnInit {
   registerUserData = {
     email: "",
     password: "",
+    fname: "",
+    lname: ""
   };
   constructor(private _auth: AuthService, private _router: Router) {}
 
@@ -21,8 +23,10 @@ export class RegisterComponent implements OnInit {
       (res) => {
         console.log(res);
         localStorage.setItem("token", res.token);
+        this._router.navigate(["/login"])
       },
       (err) => console.log(err)
     );
+
   }
 }

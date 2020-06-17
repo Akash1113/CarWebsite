@@ -4,6 +4,8 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HomepageComponent} from './components/homepage/homepage.component'
 import { AddCarComponent } from './components/add-car/add-car.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
+
 const routes: Routes = [
   {
     path: '',
@@ -23,8 +25,9 @@ const routes: Routes = [
 },
  { path: 'addcar',
   component: AddCarComponent
-}
-
+},
+{path:'userProfile',
+component: UserProfileComponent}
 ];
 
 @NgModule({

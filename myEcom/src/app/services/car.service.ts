@@ -29,7 +29,8 @@ export class CarService {
     let options = new RequestOptions({ headers: headers });
     return this._http
       .put(this._putUrl + car._id, JSON.stringify(car), options)
-      .map((response: Response) => response.json());
+      .map((response: Response) => {response.json()
+        console.log(car)});
   }
 
   deleteCar(car: Car) {

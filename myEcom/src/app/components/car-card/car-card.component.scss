@@ -7,12 +7,40 @@
 .card-body {
   padding: 10px;
 }
+@mixin transition($x, $y, $z){
+  transition: $x $y $z;
+  -moz-transition: $x $y $z;
+  -ms-transition: $x $y $z;
+  -webkit-transition: $x $y $z;
+  -o-transition: $x $y $z;
+}
+
+@mixin rotate($x){
+  -ms-transform: rotate($x); /* IE 9 */
+   -webkit-transform: rotate($x); /* Chrome, Safari, Opera */
+   transform: rotate($x);
+}
+
+@mixin scale($x){
+  transform: scale($x);
+  -moz-transform: scale($x);
+  -webkit-transform: scale($x);
+  -o-transform: scale($x);
+  -ms-transform: scale($x);
+}
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
+  text-align: center;
   width: 315px;
   height: 450px;
   margin: 25px;
+
+@include transition(all, 250ms, ease-out);
+&:hover {
+  @include scale(1.1);
+  @include scale(1.1);
+}
 }
 .card-title {
   text-align: center;
@@ -48,5 +76,6 @@ button {
   color: white;
   margin-top: 20px;
 }
+
 
 
